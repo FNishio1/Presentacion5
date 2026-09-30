@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Propuesta · Fernando Nishio</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0F0F10">
+
+<style>
+/* ===== COLORES: cambia solo estos ===== */
+:root {
+  --fondo: #0F0F10;
+  --tarjeta: #1E1F22;
+  --tarjeta-hover: #2a2b2f;
+  --texto: #EDE8E1;
+  --texto-suave: #9a958e;
+  --acento: #C2A878;
+  --acento-texto: #0F0F10;
+  --whatsapp: #25D366;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px 32px;
+}
+
+.contenedor { width: 100%; max-width: 480px; text-align: center; }
+
+/* ===== CABECERA ===== */
+.foto {
+  width: 110px; height: 110px; border-radius: 50%;
+  object-fit: cover; border: 3px solid var(--acento);
+  margin: 0 auto 14px; display: block; background: var(--tarjeta);
+}
+.foto-inicial {
+  width: 110px; height: 110px; border-radius: 50%;
+  border: 3px solid var(--acento); margin: 0 auto 14px;
+  display: none; align-items: center; justify-content: center;
+  font-size: 2.4rem; font-weight: 700; color: var(--acento); background: var(--tarjeta);
+}
+h1 { font-size: 1.4rem; margin-bottom: 4px; }
+.cargo { color: var(--acento); font-weight: 600; font-size: 1rem; line-height: 1.4; margin-bottom: 10px; }
+.para { color: var(--texto-suave); font-size: .9rem; line-height: 1.6; margin-bottom: 26px; }
+.para strong { color: var(--texto); }
+
+/* ===== TÍTULOS DE SECCIÓN ===== */
+.seccion {
+  text-align: left;
+  font-size: .75rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+  margin: 28px 0 12px;
+}
+.seccion:first-of-type { margin-top: 0; }
+
+/* ===== BOTONES PRINCIPALES ===== */
+.lista { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+
+.boton {
+  display: flex; align-items: center; gap: 14px;
+  padding: 16px 18px;
+  background: var(--tarjeta); color: var(--texto);
+  text-decoration: none; border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.06);
+  font-weight: 600; font-size: 1rem; text-align: left;
+  transition: transform .15s, background .15s;
+}
+.boton:hover, .boton:active { background: var(--tarjeta-hover); transform: translateY(-2px); }
+.boton .icono { font-size: 1.4rem; width: 28px; text-align: center; }
+.boton small { display: block; color: var(--texto-suave); font-weight: 400; font-size: .8rem; margin-top: 2px; }
+.boton .flecha { margin-left: auto; color: var(--texto-suave); }
+
+/* Botón destacado (demo) */
+.boton.destacado { background: var(--acento); color: var(--acento-texto); border: none; }
+.boton.destacado small, .boton.destacado .flecha { color: rgba(15,15,16,.7); }
+.boton.destacado:hover, .boton.destacado:active { background: #d4bc90; }
+
+/* WhatsApp */
+.boton.whatsapp { background: var(--whatsapp); color: #fff; border: none; }
+.boton.whatsapp small, .boton.whatsapp .flecha { color: rgba(255,255,255,.85); }
+
+/* ===== TARJETAS DE COMPETENCIA ===== */
+.competidor {
+  background: var(--tarjeta);
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 14px;
+  padding: 16px 18px;
+  text-align: left;
+}
+.competidor h3 { font-size: 1rem; margin-bottom: 4px; }
+.competidor .obs { color: var(--texto-suave); font-size: .85rem; line-height: 1.5; margin-bottom: 12px; }
+.competidor .enlaces { display: flex; gap: 10px; }
+.competidor .enlaces a {
+  flex: 1;
+  text-align: center;
+  padding: 10px 8px;
+  background: var(--fondo);
+  color: var(--texto);
+  text-decoration: none;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.1);
+  font-size: .88rem;
+  font-weight: 600;
+  transition: border-color .15s;
+}
+.competidor .enlaces a:hover, .competidor .enlaces a:active { border-color: var(--acento); }
+
+footer { margin-top: 32px; color: var(--texto-suave); font-size: .78rem; }
+</style>
+</head>
+
+<body>
+<main class="contenedor">
+
+  <!-- FOTO: sube tu imagen como "foto.jpg" junto a este archivo.
+       Si no existe, se muestra tu inicial. -->
+  <img class="foto" src="foto.jpg" alt="Foto de Fernando Nishio"
+       onerror="this.style.display='none'; document.getElementById('inicial').style.display='flex';">
+  <div class="foto-inicial" id="inicial">F</div>
+
+  <h1>Fernando Nishio</h1>
+  <!-- Cambia el nombre del sistema si lo necesitas -->
+  <p class="cargo">Propuesta de “Sistema de Medios Digitales y Ventas por Internet”</p>
+  <p class="para">para el proyecto de <strong>macetas técnicas para arándano</strong></p>
+
+  <!-- ===== 1. PRUÉBALO ===== -->
+  <h2 class="seccion">Pruébalo ahora</h2>
+  <ul class="lista">
+
+    <li>
+      <a class="boton destacado" href="https://fnishio1.github.io/prueba/" target="_blank" rel="noopener">
+        <span class="icono">🚀</span>
+        <span>Ver la demo<small>Así quedaría tu página</small></span>
+        <span class="flecha">›</span>
+      </a>
+    </li>
+
+    <li>
+      <a class="boton" href="https://fnishio1.github.io/chatbot/" target="_blank" rel="noopener">
+        <span class="icono">💬</span>
+        <span>Habla con el chatbot<small>Pruébalo como lo haría tu cliente</small></span>
+        <span class="flecha">›</span>
+      </a>
+    </li>
+
+  </ul>
+
+  <!-- ===== 2. MATERIAL ===== -->
+  <h2 class="seccion">Material</h2>
+  <ul class="lista">
+    <li>
+      <!-- PDF en la carpeta assets del repo. Se abre en pestaña nueva
+           (en iPhone el atributo "download" no funciona bien) -->
+      <a class="boton" href="assets/Creaci%C3%B3n%20de%20Medios%20Digitales%20y%20Estrategia%20de%20Marketing%20y%20Ventas%20por%20Internet.pdf" target="_blank" rel="noopener">
+        <span class="icono">📄</span>
+        <span>Creación de Medios Digitales y Estrategia de Marketing y Ventas por Internet<small>PDF · Ábrelo y guárdalo en tu celular</small></span>
+        <span class="flecha">›</span>
+      </a>
+    </li>
+  </ul>
+
+  <!-- ===== 3. COMPETENCIA ===== -->
+  <h2 class="seccion">Competencia en tu rubro</h2>
+  <ul class="lista">
+
+    <!-- En cada <p class="obs"> escribe un hecho que el cliente pueda comprobar
+         al entrar (ej. "No tiene botón de WhatsApp"). Evita opiniones. -->
+
+    <li class="competidor">
+      <h3>Agritec Perú</h3>
+      <p class="obs">[carece de boton whatsapp en su web pero bueno en redes]</p>
+      <div class="enlaces">
+        <a href="https://www.agritecperu.com" target="_blank" rel="noopener">🌐 Web</a>
+        <a href="https://www.instagram.com/agritec_peru" target="_blank" rel="noopener">📸 Instagram</a>
+      </div>
+    </li>
+
+    <li class="competidor">
+      <h3>PlantLogic</h3>
+      <p class="obs">[whatsapp con munero extranjero, el arandano no es su prioridad]</p>
+      <div class="enlaces">
+        <a href="https://getplantlogic.com" target="_blank" rel="noopener">🌐 Web</a>
+        <a href="https://www.instagram.com/getplantlogic" target="_blank" rel="noopener">📸 Instagram</a>
+      </div>
+    </li>
+
+    <li class="competidor">
+      <h3>Agriplant</h3>
+      <p class="obs">[Las macetas tecnicas no son su prioridad y pobre en redes sociales]</p>
+      <div class="enlaces">
+        <a href="https://agriplant.com.pe" target="_blank" rel="noopener">🌐 Web</a>
+        <a href="https://www.instagram.com/agriplant.peru" target="_blank" rel="noopener">📸 Instagram</a>
+      </div>
+    </li>
+
+  </ul>
+
+  <!-- ===== 4. CONTACTO ===== -->
+  <h2 class="seccion">Hablemos</h2>
+  <ul class="lista">
+    <li>
+      <a class="boton whatsapp" href="https://wa.me/51999156493?text=Hola%20Fernando%2C%20vi%20tu%20propuesta" target="_blank" rel="noopener">
+        <span class="icono">💬</span>
+        <span>Escríbeme por WhatsApp<small>Respuesta rápida</small></span>
+        <span class="flecha">›</span>
+      </a>
+    </li>
+  </ul>
+
+  <footer>Lima, Perú</footer>
+</main>
+</body>
+</html>
